@@ -1,0 +1,19 @@
+# AlchemyAlcove Ether
+
+## What is Ether?
+
+Ether is a react component library focused on reusability across the web.
+
+## Why Ether?
+
+There is a seemingly infinite list of component libraries. So, how do you know if Ether is the right fit for you?
+
+We have one purpose in creating Ether. It is a simplistic component library focused on reusability. Most react component libraries focus on the react ecosystem. This library focuses on reuse in and out of react.
+
+## Tech Stack
+
+In the react community, we all love libraries like emotion and styled-components. The Ether library does not use these. This is the most distinguishing difference for this library.
+
+That said, the tech stack is react and css. We have intentionally kept our dependencies low.
+
+We want you to be able to hand a css file off to any development team. Has your COO setup a zendesk site that looks nothing like your style guide. No worries. Just hand off your ether css to insert into the 3rd party site. Company branding doesn't mean you should have to hand code styles for each app.
