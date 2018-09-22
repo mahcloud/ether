@@ -10,6 +10,8 @@ There is a seemingly infinite list of component libraries. So, how do you know i
 
 We have one purpose in creating Ether. It is a simplistic component library focused on reusability. Most react component libraries focus on the react ecosystem. This library focuses on reuse in and out of react.
 
+Why not just make a simple react library with a separate css library? Because, components are tied to css. They make sense to live within the same library. Also, we encourage you inject react components as stand alone pieces where possible.
+
 ## Tech Stack
 
 In the react community, we all love libraries like emotion and styled-components. The Ether library does not use these. This is the most distinguishing difference for this library.
