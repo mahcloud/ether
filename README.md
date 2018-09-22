@@ -1,5 +1,7 @@
 # AlchemyAlcove Ether
 
+![Ether](https://media.giphy.com/media/VFOTqoaF6SvPq/giphy.gif)
+
 ## What is Ether?
 
 Ether is a react component library focused on reusability across the web.
