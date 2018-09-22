@@ -10,21 +10,17 @@
   },
   "scripts": {
     "build": "rm -rf dist/ && babel src --out-dir dist",
-    "lint": "eslint test demo app",
-    "lint:css": "stylelint \"./**/*.style.js\"",
-    "nomap": "./node_modules/.bin/webpack-dev-server --env.nodevtools",
-    "production": "npm run scssprod && ./node_modules/.bin/webpack --env.production --progress",
-    "scss": "./node_modules/.bin/sass src/global.scss ./ether.css --no-source-map --watch",
+    "lint": "eslint src",
+    "lint:css": "stylelint \"./**/*.scss\"",
+    "production": "npm run scssprod && ./node_modules/.bin/webpack --env.production --progress && rm dist/index.html",
+    "scss": "./node_modules/.bin/sass src/global.scss ./demo/ether.css --no-source-map --watch",
     "scssprod": "./node_modules/.bin/sass src/global.scss ./ether.css --no-source-map",
-    "start": "./node_modules/.bin/webpack-dev-server --env && npm run scss"
+    "start": "./node_modules/.bin/webpack --watch-stdin --env"
   },
   "dependencies": {
-    "prop-types": "15.6.2",
-    "react": "16.4.1",
-    "react-dom": "16.4.1",
-    "react-onclickoutside": "6.7.1",
-    "react-router": "4.3.1",
-    "react-router-dom": "4.3.1"
+    "prop-types": ">= 15",
+    "react": ">= 15",
+    "react-onclickoutside": ">= 6"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -59,6 +55,6 @@
     "webpack-bundle-analyzer": "2.13.1",
     "webpack-cdn-plugin": "2.2.0",
     "webpack-cli": "3.0.8",
-    "webpack-dev-server": "3.1.4"
+    "webpack-node-externals": "^1.7.2"
   }
 }
