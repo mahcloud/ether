@@ -18,6 +18,7 @@ module.exports = (env, argv) => {
         "deps": [
           { name: "prop-types", var: "PropTypes", path: "prop-types.min.js" },
           { name: "react", var: "React", path: "umd/react.production.min.js" },
+          { name: "react-dom", var: "ReactDOM", path: "umd/react-dom.production.min.js" },
           { name: "react-onclickoutside", var: "onClickOutside", path: "dist/react-onclickoutside.min.js" }
         ]
       }

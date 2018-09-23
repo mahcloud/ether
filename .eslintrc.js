@@ -21,6 +21,7 @@ module.exports = {
     "space-unary-ops": [2, {"words": true, "nonwords": false, "overrides": {"typeof": false}}],
     "react/jsx-uses-vars": [2],
     "no-template-curly-in-string": "off",
-    "standard/no-callback-literal": "off"
+    "standard/no-callback-literal": "off",
+    "eol-last": 0
   }
 };
