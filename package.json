@@ -1,6 +1,6 @@
 {
   "name": "@alchemyalcove/ether",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ether Component Library",
   "author": "Mike Hoffert",
   "main": "index.js",
