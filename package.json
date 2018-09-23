@@ -9,11 +9,10 @@
     "url": "https://github.com/AlchemyAlcove/ether"
   },
   "scripts": {
-    "build": "npm run clean && babel src --out-dir dist",
-    "clean": "rm -rf dist/",
+    "build": "babel src --out-dir dist",
     "lint": "eslint src",
     "lint:css": "stylelint \"./**/*.scss\"",
-    "production": "npm run clean && npm run scss && ./node_modules/.bin/webpack --env.production --progress && rm dist/index.html",
+    "production": "./node_modules/.bin/webpack --env.production --progress && rm dist/index.html && npm run scss",
     "scss": "./node_modules/.bin/sass src/global.scss ./dist/ether.css --no-source-map"
   },
   "dependencies": {

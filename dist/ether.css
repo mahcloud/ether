@@ -1,0 +1,28 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ECF0F1;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
+body *, html * {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.loading-ellipsis {
+  opacity: 0.75;
+  font-style: italic;
+}
