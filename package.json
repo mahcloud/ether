@@ -13,9 +13,7 @@
     "lint": "eslint src",
     "lint:css": "stylelint \"./**/*.scss\"",
     "production": "npm run scssprod && ./node_modules/.bin/webpack --env.production --progress && rm dist/index.html",
-    "scss": "./node_modules/.bin/sass src/global.scss ./demo/ether.css --no-source-map --watch",
-    "scssprod": "./node_modules/.bin/sass src/global.scss ./ether.css --no-source-map",
-    "start": "./node_modules/.bin/webpack --watch-stdin --env"
+    "scss": "./node_modules/.bin/sass src/global.scss ./dist/ether.css --no-source-map"
   },
   "dependencies": {
     "prop-types": ">= 15",
