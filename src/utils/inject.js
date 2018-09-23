@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 export default function(elements, component, props) {
   if(Array.isArray(elements) !== true) {
-    elements = [].push(elements);
+    elements = [elements];
   }
 
   elements.forEach((elem) => {
