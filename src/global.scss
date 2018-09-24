@@ -1,31 +1,12 @@
-$containerWidth: 1200px;
-$desktopBreakpoint: 992px;
-$headerHeight: 50px;
-$tabletBreakpoint: 768px;
-
-$background: #ECF0F1;
-$headerBackground: #363D44;
-$headerBackgroundHighlight: #24292D;
-$headerDropdownBackground: #FFFFFF;
-$headerLogoHighlight: #1EB6F2;
-$headerText: #FFFFFF;
-$headerTextOpaque: #BFC4CA;
-$text: #333333;
-
-$font: 'Open Sans', sans-serif;
-$weightThin: 300;
-$weightRegular: 400;
-$weightThick: 700;
-
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: $background;
-  font-size: 14px;
-  font-family: $font;
-  font-weight: $weightRegular;
-  color: $text;
+  background: var(--colors-background);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--colors-text);
 
   * {
     box-sizing: border-box;
@@ -37,7 +18,7 @@ body, html {
 }
 
 a {
-  color: $text;
+  color: var(--colors-text);
   text-decoration: none;
   cursor: pointer;
 }

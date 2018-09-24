@@ -2,11 +2,11 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #ECF0F1;
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  color: #333333;
+  background: var(--colors-background);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--colors-text);
 }
 body *, html * {
   box-sizing: border-box;
@@ -17,12 +17,12 @@ body *, html * {
 }
 
 a {
-  color: #333333;
+  color: var(--colors-text);
   text-decoration: none;
   cursor: pointer;
 }
 
 .loading-ellipsis {
-  opacity: 0.75;
+  color: var(--colors-grayedOut);
   font-style: italic;
 }
