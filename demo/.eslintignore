@@ -1,11 +1,9 @@
 .DS_Store
 .babelrc
 .eslintrc.js
-.git
-.gitignore
-README.md
-dist
+../dist
 webpack.config.js
 node_modules
 package.json
+public
 scripts

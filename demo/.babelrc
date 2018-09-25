@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "env", {
+        "modules": false,
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 11"]
+        }
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "emotion",
+    "transform-es2015-modules-commonjs",
+    "array-includes",
+    "transform-object-assign",
+    "transform-object-rest-spread"
+  ]
+}

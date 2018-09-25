@@ -7,10 +7,9 @@ body, html {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   color: var(--colors-text);
-
-  * {
-    box-sizing: border-box;
-  }
+}
+body *, html * {
+  box-sizing: border-box;
 }
 
 *:focus {
@@ -23,4 +22,7 @@ a {
   cursor: pointer;
 }
 
-@import "./components/ellipsis/ellipsis.scss";
+.loading-ellipsis {
+  color: var(--colors-grayedOut);
+  font-style: italic;
+}

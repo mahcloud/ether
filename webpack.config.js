@@ -12,6 +12,15 @@ module.exports = (env, argv) => {
       cdnModule: "deps",
       filename: "index.html",
       inject: "body"
+    }),
+    new WebpackCdnPlugin({
+      modules: {
+        "deps": [
+          { name: "prop-types", var: "PropTypes", path: "prop-types.min.js" },
+          { name: "react", var: "React", path: "umd/react.production.min.js" },
+          { name: "react-onclickoutside", var: "onClickOutside", path: "dist/react-onclickoutside.min.js" }
+        ]
+      }
     })
   ];
 
@@ -20,20 +29,7 @@ module.exports = (env, argv) => {
       new CleanWebpackPlugin(["dist"])
     )
   }
-    plugins.push(
-      new WebpackCdnPlugin({
-        modules: {
-          "deps": [
-	    { name: "prop-types", var: "PropTypes", path: "prop-types.min.js" },
-            { name: "react", var: "React", path: "umd/react.production.min.js" },
-            { name: "react-dom", var: "ReactDOM", path: "umd/react-dom.production.min.js" },
-	    { name: "react-onclickoutside", var: "onClickOutside", path: "dist/react-onclickoutside.min.js" },
-            { name: "react-router", var: "ReactRouter", path: "umd/react-router.min.js" },
-            { name: "react-router-dom", var: "ReactRouterDOM", path: "umd/react-router-dom.min.js" },
-          ]
-        }
-      })
-    );
+
   if(env.performance) {
     plugins.push(
       new BundleAnalyzerPlugin()
@@ -42,20 +38,13 @@ module.exports = (env, argv) => {
 
   return {
     mode: env.production ? "production" : "development",
-    devServer: {
-      historyApiFallback: true,
-      port: 4444
-    },
-    devtool: env.production || env.nodevtools ? false : "inline-eval-cheap-source-map",
     entry: {
-      ether: ["babel-polyfill", "./src/index.js"],
-      demo: ["./demo/app.js"]
+      ether: ["./src/index.js"]
     },
     module: {
       rules: [
         {
           test: /\.js$/,
-          exclude: /node_modules/,
           use: [
             { loader: "babel-loader" },
             {
@@ -66,23 +55,6 @@ module.exports = (env, argv) => {
               }
             }
           ]
-        }, {
-          test: /\.style.js$/,
-          exclude: /node_modules/,
-          loader: "stylelint-custom-processor-loader",
-          options: {
-            emitWarning: true
-          }
-        }, {
-          test: /\.(svg|png|gif|jpe?g)$/,
-          exclude: /node_modules/,
-          use: [{
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-              publicPath: "images/"
-            }
-          }]
         }, {
           test: /\.(css)$/,
           exclude: /node_modules/,
