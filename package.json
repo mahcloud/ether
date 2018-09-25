@@ -10,10 +10,9 @@
   },
   "scripts": {
     "babel": "babel src --out-dir dist",
-    "copy": "cp dist/ether.js demo/ && cp dist/ether.css demo/",
     "lint": "eslint src",
     "lint:css": "stylelint \"./**/*.scss\"",
-    "production": "npm run webpack && npm run babel && npm run scss && npm run copy",
+    "production": "npm run webpack && npm run babel && npm run scss",
     "scss": "./node_modules/.bin/sass src/global.scss ./dist/ether.css --no-source-map",
     "webpack": "./node_modules/.bin/webpack --env.production --progress && rm dist/index.html"
   },

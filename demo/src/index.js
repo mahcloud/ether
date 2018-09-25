@@ -1,6 +1,7 @@
 import { render } from "react-dom";
 import { setVariables } from "@alchemyalcove/ether";
 import App from "./app";
+import "../node_modules/@alchemyalcove/ether/dist/ether.css";
 import React from "react"; // eslint-disable-line no-unused-vars
 
 document.addEventListener("DOMContentLoaded", () => {
