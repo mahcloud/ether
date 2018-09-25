@@ -3,7 +3,7 @@ const setObject = function(body, prefix, object) {
     if(typeof(object[key]) === "object") {
       setObject(body, `${prefix}-${key}`, object[key]);
     } else {
-      body.style.setProperty(`${prefix}${key}`, object[key]);
+      body.style.setProperty(`${prefix}-${key}`, object[key]);
     }
   }
 };
