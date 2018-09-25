@@ -1,9 +1,10 @@
-/* global Ether */
 import { render } from "react-dom";
+import { setVariables } from "@alchemyalcove/ether";
 import App from "./app";
+import React from "react"; // eslint-disable-line no-unused-vars
 
 document.addEventListener("DOMContentLoaded", () => {
-  Ether.setVariables({
+  setVariables({
     colors: {
       grayedOut: "#7f8C8D",
       background: "#ECF0F1",

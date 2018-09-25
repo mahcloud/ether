@@ -12,26 +12,28 @@ module.exports = (env, argv) => {
       cdnModule: "deps",
       filename: "index.html",
       inject: "head"
-    }),
-    new WebpackCdnPlugin({
-      modules: {
-        "deps": [
-          { name: "react", var: "React", path: "umd/react.production.min.js" },
-          { name: "react-dom", var: "ReactDOM", path: "umd/react-dom.production.min.js" },
-          { name: "react-onclickoutside", var: "onClickOutside", path: "dist/react-onclickoutside.min.js" },
-          { name: "react-router", var: "ReactRouter", path: "umd/react-router.min.js" },
-          { name: "react-router-dom", var: "ReactRouterDOM", path: "umd/react-router-dom.min.js" },
-          { name: "prop-types", var: "PropTypes", path: "prop-types.min.js" },
-          { name: "emotion", var: "emotion", path: "dist/emotion.umd.min.js" }
-        ]
-      }
     })
   ];
 
   if(env.production) {
     plugins.push(
       new CleanWebpackPlugin(["dist"])
-    )
+    );
+    plugins.push(
+      new WebpackCdnPlugin({
+        modules: {
+          "deps": [
+            { name: "react", var: "React", path: "umd/react.production.min.js" },
+            { name: "react-dom", var: "ReactDOM", path: "umd/react-dom.production.min.js" },
+            { name: "react-onclickoutside", var: "onClickOutside", path: "dist/react-onclickoutside.min.js" },
+            { name: "react-router", var: "ReactRouter", path: "umd/react-router.min.js" },
+            { name: "react-router-dom", var: "ReactRouterDOM", path: "umd/react-router-dom.min.js" },
+            { name: "prop-types", var: "PropTypes", path: "prop-types.min.js" },
+            { name: "emotion", var: "emotion", path: "dist/emotion.umd.min.js" }
+          ]
+        }
+      })
+    );
   }
 
   return {

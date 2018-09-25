@@ -6,8 +6,7 @@ class App extends React.Component {
       <div>
         <h1>Ether - Component Library</h1>
         <h2>Setup</h2>
-        <p>
-        </p>
+        <iframe src="https://codesandbox.io/embed/314yq4ml46" style={{width: "100%", height: "500px", border: "0", overflow: "hidden"}} sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"/>
       </div>
     );
   }
