@@ -27,7 +27,6 @@ module.exports = (env, argv) => {
       }
     })
   ];
-  // { name: "@alchemyalcove/ether", var: "Ether", path: "dist/ether.js" },
 
   if(env.production) {
     plugins.push(
