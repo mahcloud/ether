@@ -8,5 +8,4 @@ dist
 webpack.config.js
 node_modules
 package.json
-public
 scripts
