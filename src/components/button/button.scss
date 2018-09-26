@@ -1,0 +1,96 @@
+.button, button, input[type="button"], input[type="submit"] {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--border-radius, "3px");
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 0 0.75em;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: var(--font-weight-regular);
+
+  svg {
+    pointer-events: none;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.primary {
+    background: var(--colors-primary);
+    color: --var(--colors-textOnPrimary);
+
+    &:hover:not(:disabled):not(:active) {
+      background: var(--colors-primaryHighlight);
+      color: --var(--colors-textOnPrimaryHighlight);
+    }
+  }
+
+  &.secondary {
+    background: var(--colors-secondary);
+    color: --var(--colors-textOnSecondary);
+
+    &:hover:not(:disabled):not(:active) {
+      background: var(--colors-secondaryHighlight);
+      color: --var(--colors-textOnSecondaryHighlight);
+    }
+  }
+
+  &.primary.danger, &.secondary.danger {
+    background: var(--colors-danger);
+    color: --var(--colors-textOnDanger);
+
+    &:hover:not(:disabled):not(:active) {
+      background: var(--colors-dangerHighlight);
+      color: --var(--colors-textOnDangerHighlight);
+    }
+  }
+
+  &.tertiary {
+    color: var(--colors-primary);
+
+    &.danger {
+      color: var(--colors-danger);
+    }
+
+    &:hover:not(:disabled):not(:active) {
+      background: var(--colors-primaryHighlight);
+      color: --var(--colors-textOnPrimaryHighlight);
+
+      &.danger {
+        background: var(--colors-dangerHighlight);
+        color: --var(--colors-textOnDangerHighlight);
+      }
+    }
+
+    &:active:not(:disabled) {
+      background: var(--colors-primary);
+      color: --var(--colors-textOnPrimary);
+
+      &.danger {
+        background: var(--colors-danger);
+        color: --var(--colors-textOnDanger);
+      }
+    }
+  }
+
+  &.size-lg {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    padding: 0 1em;
+  }
+
+  &.size-sm {
+    font-size: 1em;
+    line-height: 1.25em;
+    padding: 0 0.5em;
+  }
+
+  &.disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

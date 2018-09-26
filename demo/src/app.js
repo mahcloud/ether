@@ -1,4 +1,5 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { Button } from "@alchemyalcove/ether";
 import React from "react";
 import Readme from "./readme";
 import SetupCSS from "./setupCSS";
