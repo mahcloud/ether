@@ -1,5 +1,5 @@
 import Button from "./button";
-import Ellipsis from "./Ellipsis";
+import Ellipsis from "./ellipsis";
 
 export{
   Button,
