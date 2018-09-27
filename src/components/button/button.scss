@@ -21,11 +21,11 @@
 
   &.primary {
     background: var(--colors-primary);
-    color: --var(--colors-textOnPrimary);
+    color: var(--colors-textOnPrimary);
 
     &:hover:not(:disabled):not(:active) {
       background: var(--colors-primaryHighlight);
-      color: --var(--colors-textOnPrimaryHighlight);
+      color: var(--colors-textOnPrimaryHighlight);
     }
   }
 
@@ -35,17 +35,17 @@
 
     &:hover:not(:disabled):not(:active) {
       background: var(--colors-secondaryHighlight);
-      color: --var(--colors-textOnSecondaryHighlight);
+      color: var(--colors-textOnSecondaryHighlight);
     }
   }
 
   &.primary.danger, &.secondary.danger {
     background: var(--colors-danger);
-    color: --var(--colors-textOnDanger);
+    color: var(--colors-textOnDanger);
 
     &:hover:not(:disabled):not(:active) {
       background: var(--colors-dangerHighlight);
-      color: --var(--colors-textOnDangerHighlight);
+      color: var(--colors-textOnDangerHighlight);
     }
   }
 
@@ -58,21 +58,21 @@
 
     &:hover:not(:disabled):not(:active) {
       background: var(--colors-primaryHighlight);
-      color: --var(--colors-textOnPrimaryHighlight);
+      color: var(--colors-textOnPrimaryHighlight);
 
       &.danger {
         background: var(--colors-dangerHighlight);
-        color: --var(--colors-textOnDangerHighlight);
+        color: var(--colors-textOnDangerHighlight);
       }
     }
 
     &:active:not(:disabled) {
       background: var(--colors-primary);
-      color: --var(--colors-textOnPrimary);
+      color: var(--colors-textOnPrimary);
 
       &.danger {
         background: var(--colors-danger);
-        color: --var(--colors-textOnDanger);
+        color: var(--colors-textOnDanger);
       }
     }
   }
