@@ -55,13 +55,17 @@ var Button = function (_React$Component) {
       var classes = (0, _cx2.default)({
         "block": this.props.block,
         "button": true,
-        "danger": this.props.danger,
-        "primary": this.props.type === "primary",
-        "secondary": this.props.type === "secondary",
+        "color-primary": ["secondary", "success", "danger", "warning"].indexOf(this.props.color) === -1,
+        "color-secondary": this.props.color === "secondary",
+        "color-success": this.props.color === "success",
+        "color-danger": this.props.color === "danger",
+        "color-warning": this.props.color === "warning",
         "size-lg": this.props.size === "lg",
-        "size-md": this.props.size === "md",
+        "size-md": ["lg", "sm"].indexOf(this.props.size) === -1,
         "size-sm": this.props.size === "sm",
-        "tertiary": this.props.type === "tertiary"
+        "type-solid": ["outline", "link"].indexOf(this.props.type) === -1,
+        "type-outline": this.props.type === "outline",
+        "type-link": this.props.type === "link"
       });
 
       if (!(0, _isNil2.default)(this.props.className)) {
@@ -84,7 +88,7 @@ var Button = function (_React$Component) {
 Button.propTypes = {
   block: _propTypes2.default.bool,
   className: _propTypes2.default.string,
-  danger: _propTypes2.default.bool,
+  color: _propTypes2.default.string,
   disabled: _propTypes2.default.bool,
   onClick: _propTypes2.default.func,
   size: _propTypes2.default.string,
@@ -94,11 +98,12 @@ Button.propTypes = {
 Button.defaultProps = {
   block: false,
   className: "",
+  color: "primary",
   danger: false,
   disabled: false,
   onClick: function onClick() {},
   size: "md",
-  type: "primary"
+  type: "solid"
 };
 
 module.exports = Button;
