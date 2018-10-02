@@ -1,0 +1,195 @@
+.button, button, input[type="button"], input[type="submit"] {
+  border-radius: var(--border-radius, "3px");
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 0 0.75em;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: var(--font-weight-regular);
+
+  svg {
+    pointer-events: none;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.type-solid {
+    border: none;
+
+    &.color-primary {
+      background: var(--colors-primary);
+      color: var(--colors-textOnPrimary);
+
+      &:hover:not(:disabled):not(:active) {
+        background: var(--colors-primaryHighlight);
+        color: var(--colors-textOnPrimaryHighlight);
+      }
+    }
+
+    &.color-secondary {
+      background: var(--colors-secondary);
+      color: --var(--colors-textOnSecondary);
+
+      &:hover:not(:disabled):not(:active) {
+        background: var(--colors-secondaryHighlight);
+        color: var(--colors-textOnSecondaryHighlight);
+      }
+    }
+
+    &.color-success {
+      background: var(--colors-success);
+      color: var(--colors-textOnSuccess);
+
+      &:hover:not(:disabled):not(:active) {
+        background: var(--colors-successHighlight);
+        color: var(--colors-textOnSuccessHighlight);
+      }
+    }
+
+    &.color-danger {
+      background: var(--colors-danger);
+      color: var(--colors-textOnDanger);
+
+      &:hover:not(:disabled):not(:active) {
+        background: var(--colors-dangerHighlight);
+        color: var(--colors-textOnDangerHighlight);
+      }
+    }
+
+    &.color-warning {
+      background: var(--colors-warning);
+      color: var(--colors-textOnWarning);
+
+      &:hover:not(:disabled):not(:active) {
+        background: var(--colors-warningHighlight);
+        color: var(--colors-textOnWarningHighlight);
+      }
+    }
+  }
+
+  &.type-outline {
+    background: var(--colors-background);
+    border-style: solid;
+    border-width: 1px;
+
+    &.color-primary {
+      border-color: var(--colors-primary);
+      color: var(--colors-primary);
+
+      &:hover:not(:active) {
+        background: var(--colors-primary);
+        color: var(--colors-textOnPrimary);
+      }
+    }
+
+    &.color-secondary {
+      border-color: var(--colors-secondary);
+      color: var(--colors-secondary);
+
+      &:hover:not(:active) {
+        background: var(--colors-secondary);
+        color: var(--colors-textOnSecondary);
+      }
+    }
+
+    &.color-danger {
+      border-color: var(--colors-danger);
+      color: var(--colors-danger);
+
+      &:hover:not(:active) {
+        background: var(--colors-danger);
+        color: var(--colors-textOnDanger);
+      }
+    }
+
+    &.color-success {
+      border-color: var(--colors-success);
+      color: var(--colors-success);
+
+      &:hover:not(:active) {
+        background: var(--colors-success);
+        color: var(--colors-textOnSuccess);
+      }
+    }
+
+    &.color-warning {
+      border-color: var(--colors-warning);
+      color: var(--colors-warning);
+
+      &:hover:not(:active) {
+        background: var(--colors-warning);
+        color: var(--colors-textOnWarning);
+      }
+    }
+  }
+
+  &.type-link {
+    background: var(--colors-background);
+    border: none;
+
+    &.color-primary {
+      color: var(--colors-primary);
+
+      &:hover:not(:active) {
+        color: var(--colors-primaryHighlight);
+      }
+    }
+
+    &.color-secondary {
+      color: var(--colors-secondary);
+
+      &:hover:not(:active) {
+        color: var(--colors-secondaryHighlight);
+      }
+    }
+
+    &.color-danger {
+      color: var(--colors-danger);
+
+      &:hover:not(:active) {
+        color: var(--colors-dangerHighlight);
+      }
+    }
+
+    &.color-success {
+      color: var(--colors-success);
+
+      &:hover:not(:active) {
+        color: var(--colors-successHighlight);
+      }
+    }
+
+    &.color-warning {
+      color: var(--colors-warning);
+
+      &:hover:not(:active) {
+        color: var(--colors-warningHighlight);
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.size-lg {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    padding: 0 1em;
+  }
+
+  &.size-sm {
+    font-size: 1em;
+    line-height: 1.25em;
+    padding: 0 0.5em;
+  }
+
+  &.disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

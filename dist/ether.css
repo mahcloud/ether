@@ -22,6 +22,86 @@ a {
   cursor: pointer;
 }
 
+.button, button, input[type=button], input[type=submit] {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--border-radius, "3px");
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 0 0.75em;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: var(--font-weight-regular);
+}
+.button svg, button svg, input[type=button] svg, input[type=submit] svg {
+  pointer-events: none;
+}
+.button.block, button.block, input[type=button].block, input[type=submit].block {
+  display: block;
+  width: 100%;
+}
+.button.primary, button.primary, input[type=button].primary, input[type=submit].primary {
+  background: var(--colors-primary);
+  color: var(--colors-textOnPrimary);
+}
+.button.primary:hover:not(:disabled):not(:active), button.primary:hover:not(:disabled):not(:active), input[type=button].primary:hover:not(:disabled):not(:active), input[type=submit].primary:hover:not(:disabled):not(:active) {
+  background: var(--colors-primaryHighlight);
+  color: var(--colors-textOnPrimaryHighlight);
+}
+.button.secondary, button.secondary, input[type=button].secondary, input[type=submit].secondary {
+  background: var(--colors-secondary);
+  color: --var(--colors-textOnSecondary);
+}
+.button.secondary:hover:not(:disabled):not(:active), button.secondary:hover:not(:disabled):not(:active), input[type=button].secondary:hover:not(:disabled):not(:active), input[type=submit].secondary:hover:not(:disabled):not(:active) {
+  background: var(--colors-secondaryHighlight);
+  color: var(--colors-textOnSecondaryHighlight);
+}
+.button.primary.danger, .button.secondary.danger, button.primary.danger, button.secondary.danger, input[type=button].primary.danger, input[type=button].secondary.danger, input[type=submit].primary.danger, input[type=submit].secondary.danger {
+  background: var(--colors-danger);
+  color: var(--colors-textOnDanger);
+}
+.button.primary.danger:hover:not(:disabled):not(:active), .button.secondary.danger:hover:not(:disabled):not(:active), button.primary.danger:hover:not(:disabled):not(:active), button.secondary.danger:hover:not(:disabled):not(:active), input[type=button].primary.danger:hover:not(:disabled):not(:active), input[type=button].secondary.danger:hover:not(:disabled):not(:active), input[type=submit].primary.danger:hover:not(:disabled):not(:active), input[type=submit].secondary.danger:hover:not(:disabled):not(:active) {
+  background: var(--colors-dangerHighlight);
+  color: var(--colors-textOnDangerHighlight);
+}
+.button.tertiary, button.tertiary, input[type=button].tertiary, input[type=submit].tertiary {
+  color: var(--colors-primary);
+}
+.button.tertiary.danger, button.tertiary.danger, input[type=button].tertiary.danger, input[type=submit].tertiary.danger {
+  color: var(--colors-danger);
+}
+.button.tertiary:hover:not(:disabled):not(:active), button.tertiary:hover:not(:disabled):not(:active), input[type=button].tertiary:hover:not(:disabled):not(:active), input[type=submit].tertiary:hover:not(:disabled):not(:active) {
+  background: var(--colors-primaryHighlight);
+  color: var(--colors-textOnPrimaryHighlight);
+}
+.button.tertiary:hover:not(:disabled):not(:active).danger, button.tertiary:hover:not(:disabled):not(:active).danger, input[type=button].tertiary:hover:not(:disabled):not(:active).danger, input[type=submit].tertiary:hover:not(:disabled):not(:active).danger {
+  background: var(--colors-dangerHighlight);
+  color: var(--colors-textOnDangerHighlight);
+}
+.button.tertiary:active:not(:disabled), button.tertiary:active:not(:disabled), input[type=button].tertiary:active:not(:disabled), input[type=submit].tertiary:active:not(:disabled) {
+  background: var(--colors-primary);
+  color: var(--colors-textOnPrimary);
+}
+.button.tertiary:active:not(:disabled).danger, button.tertiary:active:not(:disabled).danger, input[type=button].tertiary:active:not(:disabled).danger, input[type=submit].tertiary:active:not(:disabled).danger {
+  background: var(--colors-danger);
+  color: var(--colors-textOnDanger);
+}
+.button.size-lg, button.size-lg, input[type=button].size-lg, input[type=submit].size-lg {
+  font-size: 1.5em;
+  line-height: 1.75em;
+  padding: 0 1em;
+}
+.button.size-sm, button.size-sm, input[type=button].size-sm, input[type=submit].size-sm {
+  font-size: 1em;
+  line-height: 1.25em;
+  padding: 0 0.5em;
+}
+.button.disabled, button.disabled, input[type=button].disabled, input[type=submit].disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
 .loading-ellipsis {
   color: var(--colors-grayedOut);
   font-style: italic;

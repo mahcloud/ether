@@ -1,4 +1,5 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Buttons from "./buttons";
 import React from "react";
 import Readme from "./readme";
 import SetupCSS from "./setupCSS";
@@ -16,6 +17,7 @@ class App extends React.Component {
             <div className="main-body">
               <Switch>
                 <Route path="/setupCSS" component={SetupCSS}/>
+                <Route path="/buttons" component={Buttons}/>
                 <Route path="/readme" component={Readme}/>
                 <Redirect path="/" to="/readme"/>
               </Switch>
