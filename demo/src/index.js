@@ -29,6 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
         regular: "400",
         thick: "700"
       }
+    },
+    grid: {
+      column: {
+        gap: "12px"
+      },
+      padding: "12px",
+      row: {
+        gap: "12px"
+      }
     }
   });
 

@@ -16,6 +16,9 @@ class SideNav extends React.Component {
           <li>
             <NavLink to="/buttons">Buttons</NavLink>
           </li>
+          <li>
+            <NavLink to="/grid">Grid System</NavLink>
+          </li>
         </ul>
       </Style>
     );

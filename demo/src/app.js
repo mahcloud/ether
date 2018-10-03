@@ -1,5 +1,6 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Buttons from "./buttons";
+import Grid from "./grid";
 import React from "react";
 import Readme from "./readme";
 import SetupCSS from "./setupCSS";
@@ -16,9 +17,10 @@ class App extends React.Component {
             <SideNav/>
             <div className="main-body">
               <Switch>
+                <Route path="/readme" component={Readme}/>
                 <Route path="/setupCSS" component={SetupCSS}/>
                 <Route path="/buttons" component={Buttons}/>
-                <Route path="/readme" component={Readme}/>
+                <Route path="/grid" component={Grid}/>
                 <Redirect path="/" to="/readme"/>
               </Switch>
             </div>

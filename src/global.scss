@@ -23,5 +23,6 @@ a {
   cursor: pointer;
 }
 
+@import "./components/grid/container.scss";
 @import "./components/button/button.scss";
 @import "./components/ellipsis/ellipsis.scss";
