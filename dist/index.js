@@ -9,8 +9,10 @@ var _components = require("./components");
 
 var _utils = require("./utils");
 
-exports.cx = _utils.cx;
+var _basicFunctions = require("@alchemyalcove/basic-functions");
+
+exports.cx = _basicFunctions.cx;
 exports.Button = _components.Button;
 exports.Ellipsis = _components.Ellipsis;
-exports.isNil = _utils.isNil;
+exports.isNil = _basicFunctions.isNil;
 exports.setVariables = _utils.setVariables;

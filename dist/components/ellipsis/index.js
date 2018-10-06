@@ -18,16 +18,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var LoadingEllipsis = function (_React$Component) {
-  _inherits(LoadingEllipsis, _React$Component);
+var Ellipsis = function (_React$Component) {
+  _inherits(Ellipsis, _React$Component);
 
-  function LoadingEllipsis(props) {
-    _classCallCheck(this, LoadingEllipsis);
+  function Ellipsis(props) {
+    _classCallCheck(this, Ellipsis);
 
-    var _this = _possibleConstructorReturn(this, (LoadingEllipsis.__proto__ || Object.getPrototypeOf(LoadingEllipsis)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Ellipsis.__proto__ || Object.getPrototypeOf(Ellipsis)).call(this, props));
 
     _this.state = {
-      count: 0
+      dots: ""
     };
 
     _this._interval = setInterval(function () {
@@ -36,7 +36,7 @@ var LoadingEllipsis = function (_React$Component) {
     return _this;
   }
 
-  _createClass(LoadingEllipsis, [{
+  _createClass(Ellipsis, [{
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       clearInterval(this._interval);
@@ -44,31 +44,27 @@ var LoadingEllipsis = function (_React$Component) {
   }, {
     key: "updateDots",
     value: function updateDots() {
-      var count = this.state.count >= 3 ? 0 : this.state.count + 1;
-      this.setState({ count: count });
+      this.setState({
+        dots: this.state.dots.length >= 3 ? "" : this.state.dots + "."
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var dots = "";
-      for (var i = 0; i < this.state.count; i++) {
-        dots += ".";
-      }
-
       return _react2.default.createElement(
         "span",
-        { className: "loading-ellipsis" },
-        this.props.children || "Loading",
-        _react2.default.createElement(
-          "span",
-          { className: "dots" },
-          dots
-        )
+        { className: "ellipsis" },
+        this.props.children,
+        this.state.dots
       );
     }
   }]);
 
-  return LoadingEllipsis;
+  return Ellipsis;
 }(_react2.default.Component);
 
-exports.default = LoadingEllipsis;
+Ellipsis.defaultProps = {
+  children: "Loading"
+};
+
+exports.default = Ellipsis;
