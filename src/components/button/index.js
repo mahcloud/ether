@@ -17,7 +17,6 @@ class Button extends React.Component {
   render() {
     let classes = cx({
       "block": this.props.block,
-      "button": true,
       "color-primary": ["secondary", "success", "danger", "warning"].indexOf(this.props.color) === -1,
       "color-secondary": this.props.color === "secondary",
       "color-success": this.props.color === "success",
