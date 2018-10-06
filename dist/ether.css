@@ -23,8 +23,6 @@ a {
 }
 
 .button, button, input[type=button], input[type=submit] {
-  border-style: solid;
-  border-width: 1px;
   border-radius: var(--border-radius, "3px");
   font-size: 1.25em;
   line-height: 1.5em;
@@ -41,51 +39,130 @@ a {
   display: block;
   width: 100%;
 }
-.button.primary, button.primary, input[type=button].primary, input[type=submit].primary {
+.button.type-solid, button.type-solid, input[type=button].type-solid, input[type=submit].type-solid {
+  border: none;
+}
+.button.type-solid.color-primary, button.type-solid.color-primary, input[type=button].type-solid.color-primary, input[type=submit].type-solid.color-primary {
   background: var(--colors-primary);
   color: var(--colors-textOnPrimary);
 }
-.button.primary:hover:not(:disabled):not(:active), button.primary:hover:not(:disabled):not(:active), input[type=button].primary:hover:not(:disabled):not(:active), input[type=submit].primary:hover:not(:disabled):not(:active) {
+.button.type-solid.color-primary:hover:not(:disabled):not(:active), button.type-solid.color-primary:hover:not(:disabled):not(:active), input[type=button].type-solid.color-primary:hover:not(:disabled):not(:active), input[type=submit].type-solid.color-primary:hover:not(:disabled):not(:active) {
   background: var(--colors-primaryHighlight);
   color: var(--colors-textOnPrimaryHighlight);
 }
-.button.secondary, button.secondary, input[type=button].secondary, input[type=submit].secondary {
+.button.type-solid.color-secondary, button.type-solid.color-secondary, input[type=button].type-solid.color-secondary, input[type=submit].type-solid.color-secondary {
   background: var(--colors-secondary);
   color: --var(--colors-textOnSecondary);
 }
-.button.secondary:hover:not(:disabled):not(:active), button.secondary:hover:not(:disabled):not(:active), input[type=button].secondary:hover:not(:disabled):not(:active), input[type=submit].secondary:hover:not(:disabled):not(:active) {
+.button.type-solid.color-secondary:hover:not(:disabled):not(:active), button.type-solid.color-secondary:hover:not(:disabled):not(:active), input[type=button].type-solid.color-secondary:hover:not(:disabled):not(:active), input[type=submit].type-solid.color-secondary:hover:not(:disabled):not(:active) {
   background: var(--colors-secondaryHighlight);
   color: var(--colors-textOnSecondaryHighlight);
 }
-.button.primary.danger, .button.secondary.danger, button.primary.danger, button.secondary.danger, input[type=button].primary.danger, input[type=button].secondary.danger, input[type=submit].primary.danger, input[type=submit].secondary.danger {
+.button.type-solid.color-success, button.type-solid.color-success, input[type=button].type-solid.color-success, input[type=submit].type-solid.color-success {
+  background: var(--colors-success);
+  color: var(--colors-textOnSuccess);
+}
+.button.type-solid.color-success:hover:not(:disabled):not(:active), button.type-solid.color-success:hover:not(:disabled):not(:active), input[type=button].type-solid.color-success:hover:not(:disabled):not(:active), input[type=submit].type-solid.color-success:hover:not(:disabled):not(:active) {
+  background: var(--colors-successHighlight);
+  color: var(--colors-textOnSuccessHighlight);
+}
+.button.type-solid.color-danger, button.type-solid.color-danger, input[type=button].type-solid.color-danger, input[type=submit].type-solid.color-danger {
   background: var(--colors-danger);
   color: var(--colors-textOnDanger);
 }
-.button.primary.danger:hover:not(:disabled):not(:active), .button.secondary.danger:hover:not(:disabled):not(:active), button.primary.danger:hover:not(:disabled):not(:active), button.secondary.danger:hover:not(:disabled):not(:active), input[type=button].primary.danger:hover:not(:disabled):not(:active), input[type=button].secondary.danger:hover:not(:disabled):not(:active), input[type=submit].primary.danger:hover:not(:disabled):not(:active), input[type=submit].secondary.danger:hover:not(:disabled):not(:active) {
+.button.type-solid.color-danger:hover:not(:disabled):not(:active), button.type-solid.color-danger:hover:not(:disabled):not(:active), input[type=button].type-solid.color-danger:hover:not(:disabled):not(:active), input[type=submit].type-solid.color-danger:hover:not(:disabled):not(:active) {
   background: var(--colors-dangerHighlight);
   color: var(--colors-textOnDangerHighlight);
 }
-.button.tertiary, button.tertiary, input[type=button].tertiary, input[type=submit].tertiary {
+.button.type-solid.color-warning, button.type-solid.color-warning, input[type=button].type-solid.color-warning, input[type=submit].type-solid.color-warning {
+  background: var(--colors-warning);
+  color: var(--colors-textOnWarning);
+}
+.button.type-solid.color-warning:hover:not(:disabled):not(:active), button.type-solid.color-warning:hover:not(:disabled):not(:active), input[type=button].type-solid.color-warning:hover:not(:disabled):not(:active), input[type=submit].type-solid.color-warning:hover:not(:disabled):not(:active) {
+  background: var(--colors-warningHighlight);
+  color: var(--colors-textOnWarningHighlight);
+}
+.button.type-outline, button.type-outline, input[type=button].type-outline, input[type=submit].type-outline {
+  background: var(--colors-background);
+  border-style: solid;
+  border-width: 1px;
+}
+.button.type-outline.color-primary, button.type-outline.color-primary, input[type=button].type-outline.color-primary, input[type=submit].type-outline.color-primary {
+  border-color: var(--colors-primary);
   color: var(--colors-primary);
 }
-.button.tertiary.danger, button.tertiary.danger, input[type=button].tertiary.danger, input[type=submit].tertiary.danger {
-  color: var(--colors-danger);
-}
-.button.tertiary:hover:not(:disabled):not(:active), button.tertiary:hover:not(:disabled):not(:active), input[type=button].tertiary:hover:not(:disabled):not(:active), input[type=submit].tertiary:hover:not(:disabled):not(:active) {
-  background: var(--colors-primaryHighlight);
-  color: var(--colors-textOnPrimaryHighlight);
-}
-.button.tertiary:hover:not(:disabled):not(:active).danger, button.tertiary:hover:not(:disabled):not(:active).danger, input[type=button].tertiary:hover:not(:disabled):not(:active).danger, input[type=submit].tertiary:hover:not(:disabled):not(:active).danger {
-  background: var(--colors-dangerHighlight);
-  color: var(--colors-textOnDangerHighlight);
-}
-.button.tertiary:active:not(:disabled), button.tertiary:active:not(:disabled), input[type=button].tertiary:active:not(:disabled), input[type=submit].tertiary:active:not(:disabled) {
+.button.type-outline.color-primary:hover:not(:active), button.type-outline.color-primary:hover:not(:active), input[type=button].type-outline.color-primary:hover:not(:active), input[type=submit].type-outline.color-primary:hover:not(:active) {
   background: var(--colors-primary);
   color: var(--colors-textOnPrimary);
 }
-.button.tertiary:active:not(:disabled).danger, button.tertiary:active:not(:disabled).danger, input[type=button].tertiary:active:not(:disabled).danger, input[type=submit].tertiary:active:not(:disabled).danger {
+.button.type-outline.color-secondary, button.type-outline.color-secondary, input[type=button].type-outline.color-secondary, input[type=submit].type-outline.color-secondary {
+  border-color: var(--colors-secondary);
+  color: var(--colors-secondary);
+}
+.button.type-outline.color-secondary:hover:not(:active), button.type-outline.color-secondary:hover:not(:active), input[type=button].type-outline.color-secondary:hover:not(:active), input[type=submit].type-outline.color-secondary:hover:not(:active) {
+  background: var(--colors-secondary);
+  color: var(--colors-textOnSecondary);
+}
+.button.type-outline.color-danger, button.type-outline.color-danger, input[type=button].type-outline.color-danger, input[type=submit].type-outline.color-danger {
+  border-color: var(--colors-danger);
+  color: var(--colors-danger);
+}
+.button.type-outline.color-danger:hover:not(:active), button.type-outline.color-danger:hover:not(:active), input[type=button].type-outline.color-danger:hover:not(:active), input[type=submit].type-outline.color-danger:hover:not(:active) {
   background: var(--colors-danger);
   color: var(--colors-textOnDanger);
+}
+.button.type-outline.color-success, button.type-outline.color-success, input[type=button].type-outline.color-success, input[type=submit].type-outline.color-success {
+  border-color: var(--colors-success);
+  color: var(--colors-success);
+}
+.button.type-outline.color-success:hover:not(:active), button.type-outline.color-success:hover:not(:active), input[type=button].type-outline.color-success:hover:not(:active), input[type=submit].type-outline.color-success:hover:not(:active) {
+  background: var(--colors-success);
+  color: var(--colors-textOnSuccess);
+}
+.button.type-outline.color-warning, button.type-outline.color-warning, input[type=button].type-outline.color-warning, input[type=submit].type-outline.color-warning {
+  border-color: var(--colors-warning);
+  color: var(--colors-warning);
+}
+.button.type-outline.color-warning:hover:not(:active), button.type-outline.color-warning:hover:not(:active), input[type=button].type-outline.color-warning:hover:not(:active), input[type=submit].type-outline.color-warning:hover:not(:active) {
+  background: var(--colors-warning);
+  color: var(--colors-textOnWarning);
+}
+.button.type-link, button.type-link, input[type=button].type-link, input[type=submit].type-link {
+  background: var(--colors-background);
+  border: none;
+}
+.button.type-link.color-primary, button.type-link.color-primary, input[type=button].type-link.color-primary, input[type=submit].type-link.color-primary {
+  color: var(--colors-primary);
+}
+.button.type-link.color-primary:hover:not(:active), button.type-link.color-primary:hover:not(:active), input[type=button].type-link.color-primary:hover:not(:active), input[type=submit].type-link.color-primary:hover:not(:active) {
+  color: var(--colors-primaryHighlight);
+}
+.button.type-link.color-secondary, button.type-link.color-secondary, input[type=button].type-link.color-secondary, input[type=submit].type-link.color-secondary {
+  color: var(--colors-secondary);
+}
+.button.type-link.color-secondary:hover:not(:active), button.type-link.color-secondary:hover:not(:active), input[type=button].type-link.color-secondary:hover:not(:active), input[type=submit].type-link.color-secondary:hover:not(:active) {
+  color: var(--colors-secondaryHighlight);
+}
+.button.type-link.color-danger, button.type-link.color-danger, input[type=button].type-link.color-danger, input[type=submit].type-link.color-danger {
+  color: var(--colors-danger);
+}
+.button.type-link.color-danger:hover:not(:active), button.type-link.color-danger:hover:not(:active), input[type=button].type-link.color-danger:hover:not(:active), input[type=submit].type-link.color-danger:hover:not(:active) {
+  color: var(--colors-dangerHighlight);
+}
+.button.type-link.color-success, button.type-link.color-success, input[type=button].type-link.color-success, input[type=submit].type-link.color-success {
+  color: var(--colors-success);
+}
+.button.type-link.color-success:hover:not(:active), button.type-link.color-success:hover:not(:active), input[type=button].type-link.color-success:hover:not(:active), input[type=submit].type-link.color-success:hover:not(:active) {
+  color: var(--colors-successHighlight);
+}
+.button.type-link.color-warning, button.type-link.color-warning, input[type=button].type-link.color-warning, input[type=submit].type-link.color-warning {
+  color: var(--colors-warning);
+}
+.button.type-link.color-warning:hover:not(:active), button.type-link.color-warning:hover:not(:active), input[type=button].type-link.color-warning:hover:not(:active), input[type=submit].type-link.color-warning:hover:not(:active) {
+  color: var(--colors-warningHighlight);
+}
+.button.type-link:hover, button.type-link:hover, input[type=button].type-link:hover, input[type=submit].type-link:hover {
+  text-decoration: underline;
 }
 .button.size-lg, button.size-lg, input[type=button].size-lg, input[type=submit].size-lg {
   font-size: 1.5em;
@@ -102,7 +179,7 @@ a {
   cursor: not-allowed;
 }
 
-.loading-ellipsis {
+.ellipsis {
   color: var(--colors-grayedOut);
   font-style: italic;
 }

@@ -1,11 +1,11 @@
 import React from "react";
 
-class LoadingEllipsis extends React.Component {
+class Ellipsis extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      count: 0
+      dots: ""
     };
 
     this._interval = setInterval(() => this.updateDots(), 500);
@@ -16,23 +16,22 @@ class LoadingEllipsis extends React.Component {
   }
 
   updateDots() {
-    let count = (this.state.count >= 3) ? 0 : this.state.count + 1;
-    this.setState({count: count});
+    this.setState({
+      dots: (this.state.dots.length >= 3) ? "" : this.state.dots + "."
+    });
   }
 
   render() {
-    let dots = "";
-    for(let i = 0; i < this.state.count; i++) {
-      dots += ".";
-    }
-
     return(
-      <span className="loading-ellipsis">
-        {this.props.children || "Loading"}
-        <span className="dots">{dots}</span>
+      <span className="ellipsis">
+        {this.props.children}{this.state.dots}
       </span>
     );
   }
 }
 
-export default LoadingEllipsis;
+Ellipsis.defaultProps = {
+  children: "Loading"
+};
+
+export default Ellipsis;

@@ -2,13 +2,7 @@
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _cx = require("../../utils/cx");
-
-var _cx2 = _interopRequireDefault(_cx);
-
-var _isNil = require("../../utils/isNil");
-
-var _isNil2 = _interopRequireDefault(_isNil);
+var _basicFunctions = require("@alchemyalcove/basic-functions");
 
 var _propTypes = require("prop-types");
 
@@ -52,7 +46,7 @@ var Button = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var classes = (0, _cx2.default)({
+      var classes = (0, _basicFunctions.cx)({
         "block": this.props.block,
         "button": true,
         "color-primary": ["secondary", "success", "danger", "warning"].indexOf(this.props.color) === -1,
@@ -68,7 +62,7 @@ var Button = function (_React$Component) {
         "type-link": this.props.type === "link"
       });
 
-      if (!(0, _isNil2.default)(this.props.className)) {
+      if (!(0, _basicFunctions.isNil)(this.props.className)) {
         classes = classes + " " + this.props.className;
       }
 

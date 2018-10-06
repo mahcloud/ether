@@ -1,4 +1,7 @@
 ## [Unreleased]
+- Switch to BasicFunctions library
+- Add unit test around ellipsis
+- Remove dots span from ellipsis
 
 ## V1.0.11
 - Add button demo
