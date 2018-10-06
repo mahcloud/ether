@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`danger small link button 1`] = `
+<button
+  class="color-danger size-sm type-link "
+  type="button"
+/>
+`;
+
+exports[`disabled generic button 1`] = `
+<button
+  class="color-primary size-md type-solid "
+  disabled=""
+  type="button"
+/>
+`;
+
+exports[`secondary large button 1`] = `
+<button
+  class="color-secondary size-lg type-solid "
+  type="button"
+/>
+`;
+
+exports[`success small outline button 1`] = `
+<button
+  class="color-success size-sm type-outline "
+  type="button"
+/>
+`;
+
+exports[`warning small button 1`] = `
+<button
+  class="color-warning size-sm type-solid "
+  type="button"
+/>
+`;

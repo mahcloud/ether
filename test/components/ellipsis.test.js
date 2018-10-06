@@ -50,3 +50,10 @@ test("three dots", () => {
 
   expect(queryByText("Loading...")).toBeInTheDocument();
 });
+
+test("back to zero dots", () => {
+  const{queryByText} = render(<Ellipsis/>);
+  clock.tick(2000);
+
+  expect(queryByText("Loading")).toBeInTheDocument();
+});
