@@ -8,6 +8,15 @@
     "type": "git",
     "url": "https://github.com/AlchemyAlcove/ether"
   },
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "responsive",
+    "react",
+    "framework",
+    "component"
+  ],
   "scripts": {
     "babel": "babel src --out-dir dist",
     "lint": "eslint src",
