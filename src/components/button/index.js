@@ -15,19 +15,18 @@ const Button = (props) => {
   }
 
   let classes = cx({
-    "block": props.block,
-    "button": true,
-    "color-primary": ["secondary", "success", "danger", "warning"].indexOf(props.color) === -1,
-    "color-secondary": props.color === "secondary",
-    "color-success": props.color === "success",
-    "color-danger": props.color === "danger",
-    "color-warning": props.color === "warning",
-    "size-lg": props.size === "lg",
-    "size-md": ["lg", "sm"].indexOf(props.size) === -1,
-    "size-sm": props.size === "sm",
-    "type-solid": ["outline", "link"].indexOf(props.type) === -1,
-    "type-outline": props.type === "outline",
-    "type-link": props.type === "link"
+    "block": this.props.block,
+    "color-primary": ["secondary", "success", "danger", "warning"].indexOf(this.props.color) === -1,
+    "color-secondary": this.props.color === "secondary",
+    "color-success": this.props.color === "success",
+    "color-danger": this.props.color === "danger",
+    "color-warning": this.props.color === "warning",
+    "size-lg": this.props.size === "lg",
+    "size-md": ["lg", "sm"].indexOf(this.props.size) === -1,
+    "size-sm": this.props.size === "sm",
+    "type-solid": ["outline", "link"].indexOf(this.props.type) === -1,
+    "type-outline": this.props.type === "outline",
+    "type-link": this.props.type === "link"
   });
 
   if(!isNil(props.className)) {
