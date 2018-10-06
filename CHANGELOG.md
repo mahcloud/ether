@@ -1,4 +1,5 @@
 ## [Unreleased]
+- Switch to BasicFunctions library
 
 ## V1.0.11
 - Add button demo

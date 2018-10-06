@@ -1,5 +1,4 @@
-import cx from "../../utils/cx";
-import isNil from "../../utils/isNil";
+import { cx, isNil } from "@alchemyalcove/basic-functions";
 import PropTypes from "prop-types";
 import React from "react";
 

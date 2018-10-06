@@ -1,5 +1,6 @@
 import { Button, Ellipsis } from "./components";
-import { cx, isNil, setVariables } from "./utils";
+import { setVariables } from "./utils";
+import { cx, isNil } from "@alchemyalcove/basic-functions";
 
 export{
   cx,
