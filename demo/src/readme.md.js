@@ -1,6 +1,6 @@
 export default `# AlchemyAlcove Ether
 
-[![CircleCI](https://circleci.com/gh/AlchemyAlcove/ether.svg?style=svg&circle-token=2165a50699f6816bb9aeccf9afd2ca6fce95fd4a)](https://circleci.com/gh/AlchemyAlcove/ether)
+[![CircleCI](https://circleci.com/gh/AlchemyAlcove/Ether.svg?style=svg&circle-token=2165a50699f6816bb9aeccf9afd2ca6fce95fd4a)](https://circleci.com/gh/AlchemyAlcove/ether)
 
 ![Ether](https://media.giphy.com/media/VFOTqoaF6SvPq/giphy.gif)
 

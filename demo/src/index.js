@@ -1,9 +1,10 @@
+import "../node_modules/@alchemyalcove/ether/dist/ether.css";
 import { render } from "react-dom";
 import { setVariables } from "@alchemyalcove/ether";
 import { injectGlobal } from "emotion";
 import App from "./app";
-import "../node_modules/@alchemyalcove/ether/dist/ether.css";
 import React from "react"; // eslint-disable-line no-unused-vars
+import Schema from "@alchemyalcove/color-schema";
 
 injectGlobal`
   iframe {
@@ -16,14 +17,10 @@ injectGlobal`
 
 document.addEventListener("DOMContentLoaded", () => {
   setVariables({
-    colors: {
-      background: "#ECF0F1",
-      danger: "#E74C3C",
-      grayedOut: "#7f8C8D",
-      primary: "#2C3E50",
-      secondary: "#95A5A6",
-      text: "#333333"
+    border: {
+      radius: "3px"
     },
+    colors: Schema(),
     font: {
       family: "'Open-Sans', sans-serif",
       size: "14px",
