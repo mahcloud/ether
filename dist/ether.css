@@ -179,6 +179,51 @@ a {
   cursor: not-allowed;
 }
 
+.notice {
+  position: relative;
+  padding: 0 12px;
+  font-weight: var(--font-weight-thin);
+  border-radius: var(--border-radius, "3px");
+  border: 1px solid var(--colors-border);
+  border-left-width: 4px;
+  color: var(--colors-grayedOut);
+}
+.notice h1, .notice h2, .notice h3, .notice h4, .notice h5, .notice h6 {
+  margin: 12px 0;
+  font-weight: var(--font-weight-thick);
+  border-bottom: 1px dashed var(--colors-border);
+}
+.notice.color-primary {
+  border-left-color: var(--colors-primary);
+}
+.notice.color-primary h1, .notice.color-primary h2, .notice.color-primary h3, .notice.color-primary h4, .notice.color-primary h5, .notice.color-primary h6 {
+  color: var(--colors-primary);
+}
+.notice.color-secondary {
+  border-left-color: var(--colors-secondary);
+}
+.notice.color-secondary h1, .notice.color-secondary h2, .notice.color-secondary h3, .notice.color-secondary h4, .notice.color-secondary h5, .notice.color-secondary h6 {
+  color: var(--colors-secondary);
+}
+.notice.color-success {
+  border-left-color: var(--colors-success);
+}
+.notice.color-success h1, .notice.color-success h2, .notice.color-success h3, .notice.color-success h4, .notice.color-success h5, .notice.color-success h6 {
+  color: var(--colors-success);
+}
+.notice.color-danger {
+  border-left-color: var(--colors-danger);
+}
+.notice.color-danger h1, .notice.color-danger h2, .notice.color-danger h3, .notice.color-danger h4, .notice.color-danger h5, .notice.color-danger h6 {
+  color: var(--colors-danger);
+}
+.notice.color-warning {
+  border-left-color: var(--colors-warning);
+}
+.notice.color-warning h1, .notice.color-warning h2, .notice.color-warning h3, .notice.color-warning h4, .notice.color-warning h5, .notice.color-warning h6 {
+  color: var(--colors-warning);
+}
+
 .ellipsis {
   color: var(--colors-grayedOut);
   font-style: italic;
