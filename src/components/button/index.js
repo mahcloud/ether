@@ -52,9 +52,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   block: false,
-  className: "",
   color: "primary",
-  danger: false,
   disabled: false,
   onClick: () => {},
   size: "md",
