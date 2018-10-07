@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@alchemyalcove/ether": "file:../",
-    "@alchemyalcove/color-schema": "1.0.6",
+    "@alchemyalcove/color-schema": "1.2.0",
     "emotion": "9.2.6",
     "prop-types": "15.6.2",
     "react": "16.4.1",
