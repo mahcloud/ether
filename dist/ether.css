@@ -179,6 +179,25 @@ a {
   cursor: not-allowed;
 }
 
+nav.breadcrumbs {
+  background: var(--colors-secondary);
+  font-size: 1.25rem;
+}
+nav.breadcrumbs ol, nav.breadcrumbs ul {
+  list-style: none;
+  padding: 0.75rem 1rem;
+}
+nav.breadcrumbs ol li, nav.breadcrumbs ul li {
+  display: inline-block;
+}
+nav.breadcrumbs ol li:not(:first-child)::before, nav.breadcrumbs ul li:not(:first-child)::before {
+  content: "/";
+  padding: 0 0.5rem;
+}
+nav.breadcrumbs ol li a:hover, nav.breadcrumbs ul li a:hover {
+  text-decoration: underline;
+}
+
 .notice {
   position: relative;
   padding: 0 12px;
