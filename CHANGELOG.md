@@ -1,7 +1,8 @@
 ## [Unreleased]
-- Switch to BasicFunctions library
-- Add unit test around ellipsis
-- Remove dots span from ellipsis
+- Switch to BasicFunctions library.
+- Add unit test around ellipsis.
+- Remove dots span from ellipsis.
+- Add notice component.
 
 ## V1.0.11
 - Add button demo

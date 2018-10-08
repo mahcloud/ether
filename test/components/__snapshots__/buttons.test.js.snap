@@ -2,14 +2,14 @@
 
 exports[`danger small link button 1`] = `
 <button
-  class="color-danger size-sm type-link "
+  class="color-danger size-sm type-link"
   type="button"
 />
 `;
 
 exports[`disabled generic button 1`] = `
 <button
-  class="color-primary size-md type-solid "
+  class="color-primary size-md type-solid"
   disabled=""
   type="button"
 />
@@ -17,21 +17,21 @@ exports[`disabled generic button 1`] = `
 
 exports[`secondary large button 1`] = `
 <button
-  class="color-secondary size-lg type-solid "
+  class="color-secondary size-lg type-solid"
   type="button"
 />
 `;
 
 exports[`success small outline button 1`] = `
 <button
-  class="color-success size-sm type-outline "
+  class="color-success size-sm type-outline"
   type="button"
 />
 `;
 
 exports[`warning small button 1`] = `
 <button
-  class="color-warning size-sm type-solid "
+  class="color-warning size-sm type-solid"
   type="button"
 />
 `;

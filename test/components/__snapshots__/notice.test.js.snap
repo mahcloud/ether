@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`danger small link button 1`] = `
+<div
+  class="notice color-danger"
+/>
+`;
+
+exports[`generic notice 1`] = `
+<div
+  class="notice color-primary"
+/>
+`;
+
+exports[`secondary notice 1`] = `
+<div
+  class="notice color-secondary"
+/>
+`;
+
+exports[`success small outline button 1`] = `
+<div
+  class="notice color-success"
+/>
+`;
+
+exports[`warning small button 1`] = `
+<div
+  class="notice color-warning"
+/>
+`;

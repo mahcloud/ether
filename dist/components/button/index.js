@@ -1,7 +1,5 @@
 "use strict";
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _basicFunctions = require("@alchemyalcove/basic-functions");
 
 var _propTypes = require("prop-types");
@@ -14,70 +12,47 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+// eslint-disable-line no-unused-vars
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var Button = function Button(props) {
+  var handleClick = function handleClick(e) {
+    if (typeof e !== "undefined") {
+      e.preventDefault();
+      e.stopPropagation();
+    }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+    if (!props.disabled) {
+      props.onClick();
+    }
+  };
 
-var Button = function (_React$Component) {
-  _inherits(Button, _React$Component);
+  var classes = (0, _basicFunctions.cx)({
+    "block": props.block,
+    "color-primary": ["secondary", "success", "danger", "warning"].indexOf(props.color) === -1,
+    "color-secondary": props.color === "secondary",
+    "color-success": props.color === "success",
+    "color-danger": props.color === "danger",
+    "color-warning": props.color === "warning",
+    "size-lg": props.size === "lg",
+    "size-md": ["lg", "sm"].indexOf(props.size) === -1,
+    "size-sm": props.size === "sm",
+    "type-solid": ["outline", "link"].indexOf(props.type) === -1,
+    "type-outline": props.type === "outline",
+    "type-link": props.type === "link"
+  });
 
-  function Button() {
-    _classCallCheck(this, Button);
-
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+  if (!(0, _basicFunctions.isNil)(props.className)) {
+    classes = classes + " " + props.className;
   }
 
-  _createClass(Button, [{
-    key: "handleClick",
-    value: function handleClick(e) {
-      if (typeof e !== "undefined") {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-
-      if (!this.props.disabled) {
-        this.props.onClick();
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var classes = (0, _basicFunctions.cx)({
-        "block": this.props.block,
-        "button": true,
-        "color-primary": ["secondary", "success", "danger", "warning"].indexOf(this.props.color) === -1,
-        "color-secondary": this.props.color === "secondary",
-        "color-success": this.props.color === "success",
-        "color-danger": this.props.color === "danger",
-        "color-warning": this.props.color === "warning",
-        "size-lg": this.props.size === "lg",
-        "size-md": ["lg", "sm"].indexOf(this.props.size) === -1,
-        "size-sm": this.props.size === "sm",
-        "type-solid": ["outline", "link"].indexOf(this.props.type) === -1,
-        "type-outline": this.props.type === "outline",
-        "type-link": this.props.type === "link"
-      });
-
-      if (!(0, _basicFunctions.isNil)(this.props.className)) {
-        classes = classes + " " + this.props.className;
-      }
-
-      return _react2.default.createElement(
-        "button",
-        { className: classes, type: "button", disabled: this.props.disabled, onClick: function onClick(e) {
-            return _this2.handleClick(e);
-          } },
-        this.props.children
-      );
-    }
-  }]);
-
-  return Button;
-}(_react2.default.Component);
+  return _react2.default.createElement(
+    "button",
+    { className: classes, type: "button", disabled: props.disabled, onClick: function onClick(e) {
+        return handleClick(e);
+      } },
+    props.children
+  );
+};
 
 Button.propTypes = {
   block: _propTypes2.default.bool,
@@ -91,9 +66,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   block: false,
-  className: "",
   color: "primary",
-  danger: false,
   disabled: false,
   onClick: function onClick() {},
   size: "md",
