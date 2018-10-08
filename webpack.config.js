@@ -69,7 +69,7 @@ module.exports = (env, argv) => {
       ]
     },
     output: {
-      filename: "[name].js",
+      filename: "[name].umd.js",
       path: path.join(__dirname, "dist"),
       library: "Ether",
       libraryTarget: "umd",
