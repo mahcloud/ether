@@ -210,7 +210,7 @@ nav.breadcrumbs ol li a:hover, nav.breadcrumbs ul li a:hover {
   margin: 12px 0;
   font-weight: var(--font-weight-thick);
 }
-.notice:not(:last-child) {
+.notice h1:not(:last-child), .notice h2:not(:last-child), .notice h3:not(:last-child), .notice h4:not(:last-child), .notice h5:not(:last-child), .notice h6:not(:last-child) {
   border-bottom: 1px dashed var(--colors-border);
 }
 .notice.color-primary {

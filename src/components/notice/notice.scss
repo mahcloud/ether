@@ -10,11 +10,12 @@
   h1, h2, h3, h4, h5, h6 {
     margin: 12px 0;
     font-weight: var(--font-weight-thick);
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed var(--colors-border);
+    }
   }
 
-  &:not(:last-child) {
-    border-bottom: 1px dashed var(--colors-border);
-  }
       
   &.color-primary {
     border-left-color: var(--colors-primary);
