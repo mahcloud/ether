@@ -1,0 +1,26 @@
+nav.breadcrumbs {
+  background: var(--colors-secondary);
+  font-size: 1.25rem;
+
+  ol, ul {
+    list-style: none;
+    padding: 0.75rem 1rem;
+
+    li {
+      display: inline-block;
+
+      &:not(:first-child) {
+        &::before {
+          content: "/";
+          padding: 0 0.5rem;
+        }
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
