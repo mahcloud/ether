@@ -1,5 +1,7 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Breadcrumbs from "./breadcrumbs";
 import Buttons from "./buttons";
+import Notices from "./notices";
 import React from "react";
 import Readme from "./readme";
 import SetupCSS from "./setupCSS";
@@ -16,9 +18,11 @@ class App extends React.Component {
             <SideNav/>
             <div className="main-body">
               <Switch>
+                <Route path="/readme" component={Readme}/>
                 <Route path="/setupCSS" component={SetupCSS}/>
                 <Route path="/buttons" component={Buttons}/>
-                <Route path="/readme" component={Readme}/>
+                <Route path="/notices" component={Notices}/>
+                <Route path="/breadcrumbs" component={Breadcrumbs}/>
                 <Redirect path="/" to="/readme"/>
               </Switch>
             </div>
