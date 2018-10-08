@@ -209,6 +209,8 @@ nav.breadcrumbs ol li a:hover, nav.breadcrumbs ul li a:hover {
 .notice h1, .notice h2, .notice h3, .notice h4, .notice h5, .notice h6 {
   margin: 12px 0;
   font-weight: var(--font-weight-thick);
+}
+.notice:not(:last-child) {
   border-bottom: 1px dashed var(--colors-border);
 }
 .notice.color-primary {
