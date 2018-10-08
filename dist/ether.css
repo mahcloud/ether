@@ -180,7 +180,6 @@ a {
 }
 
 nav.breadcrumbs {
-  background: var(--colors-secondary);
   font-size: 1.25rem;
 }
 nav.breadcrumbs ol, nav.breadcrumbs ul {
