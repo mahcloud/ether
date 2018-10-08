@@ -1,7 +1,6 @@
 import { Notice } from "../../src";
 import { fireEvent, render } from "react-testing-library";
 import React from "react"; // eslint-disable-line no-unused-vars
-import sinon from "sinon";
 
 test("generic notice", () => {
   const{container} = render(<Notice/>);

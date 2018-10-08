@@ -4,7 +4,7 @@
 
 ![Ether](https://media.giphy.com/media/VFOTqoaF6SvPq/giphy.gif)
 
-Download size of 6.5KB
+Download size of 7.2KB
 
 ## What is Ether?
 

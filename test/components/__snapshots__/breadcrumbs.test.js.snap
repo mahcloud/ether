@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`3 links 1`] = `
+<nav
+  class="breadcrumbs"
+>
+  <ol>
+    <li
+      class="crumb"
+    >
+      <a
+        href="/pages"
+      >
+        One
+      </a>
+    </li>
+    <li
+      class="crumb funky"
+    >
+      <a
+        href="/pages/two"
+      >
+        Two
+      </a>
+    </li>
+    <li
+      class="crumb"
+    >
+      Three
+    </li>
+  </ol>
+</nav>
+`;
